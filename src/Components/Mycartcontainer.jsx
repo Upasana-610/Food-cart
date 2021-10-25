@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react'
+import "./mycartcontainer.css"
 import MyCart from './MyCart'
 const Mycartcontainer = () => {
     let [data,setdata]=useState([]);
@@ -28,7 +29,7 @@ const Mycartcontainer = () => {
         }, []);
 
     return (
-        <div>
+        <div className="mycartcontainer">
             <MyCart data={data}/>
         </div>
     )
