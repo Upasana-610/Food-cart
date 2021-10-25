@@ -1,5 +1,7 @@
 .mycartcontainer{
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid #e5eaf0;
     width: 940px;
+    background-color: white;
+    z-index: 1;
 }

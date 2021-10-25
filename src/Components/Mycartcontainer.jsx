@@ -14,8 +14,10 @@ const Mycartcontainer = () => {
         const json = await response.json();
         console.log(json);
         let {categories}=json;
-        console.log(typeof categories)
+        console.log( categories)
+
         setdata(categories);
+        
         } catch (error) {
         
         console.log("error", error);
