@@ -1,0 +1,25 @@
+.card{
+    width: 800px;
+    height: 350px;
+    background-color: white;
+    border: 3px solid orange;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: aquamarine;
+    display:flex;
+}
+.card  img{
+    width: 250px;
+    /* height:200px; */
+    margin:2.8rem ;
+}
+.card  .text{
+    /* width: 250px; */
+    /* height:200px; */
+    margin:3.9rem 5px ;
+    letter-spacing: 0.3px;
+}  
+.card  .text p{
+    margin: 10px 0;
+}
+
