@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import "./mycartcontainer.css"
 import MyCart from './MyCart'
 import ViewMore from './ViewMore';
+import Payment from './Payment';
 const Mycartcontainer = () => {
     let [data,setdata]=useState([]);
     // let [array,setArray]=useState([])
@@ -42,8 +43,16 @@ const Mycartcontainer = () => {
 
     return (
         <div className="mycartcontainer">
+        <div className="left">
             <MyCart data={data}/>
             <ViewMore data={data}  setdata={setdata}/>
+
+
+        </div>
+        <div>
+            <Payment/>
+        </div>
+
         </div>
     )
 }

@@ -1,0 +1,39 @@
+.payment{
+    padding: 10px 0;
+    width: 350px;
+    background-color: white;
+}
+.payment h3{
+    border-bottom: 2px solid #e5eaf0;
+    padding: 10px;
+}
+.payment h3 span{
+    color: orange;
+}
+
+.payment .paymentdetails{
+    padding: 20px;
+}
+li{
+    color: #414346;
+    list-style: none;
+    margin: 10px 0;
+}
+.paymentdetails{
+    display: flex;
+    justify-content: space-between;
+}
+.total{
+    border-top: 1px solid #e5eaf0;
+}
+.payment button{
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin: 10px 0;
+    background-image: linear-gradient(to right top, #624a1e, #826836, #a2884f, #c3a969, #e5cc85);    display: block;
+    width: 80%;
+    margin-left: 45px;
+    /* margin: 0 auto; */
+    padding: 8px 0;
+}

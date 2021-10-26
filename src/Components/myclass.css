@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
 .card{
-    width: 900px;
+    width: 750px;
     height: 350px;
     background-color: white;
     border-bottom: 3px solid #e5eaf0;
@@ -9,6 +10,7 @@
     width: 250px;
     /* height:200px; */
     margin:2.8rem ;
+    border-radius: 15px;
 }
 .card  .text{
     /* width: 250px; */
@@ -16,7 +18,26 @@
     margin:3.9rem 5px ;
     letter-spacing: 0.3px;
 }  
+.card  .text > h3{
+font-family: 'Zen Antique Soft', serif;
+}
 .card  .text p{
     margin: 10px 0;
 }
+.card  .text p:nth-child(4){
+    font-size: 20px;
+}
+.card  .text p:nth-child(4) span{
+    margin-right: 10px;
+}
+.card  .text p:nth-child(4) span:nth-child(1){
+
+}
+
+.card  .text p:nth-child(4) span:hover{
+    cursor: pointer;
+}
+
+
+
 
