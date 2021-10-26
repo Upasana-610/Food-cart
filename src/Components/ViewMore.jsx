@@ -24,7 +24,7 @@ const ViewMore = ({data,setdata}) => {
     }
     return (
         <div className="viewMore">
-            <button onClick={showThreeMore}>View More <span><MdKeyboardArrowDown/> </span></button>
+            <button onClick={showThreeMore}>View More<span><MdKeyboardArrowDown/> </span></button>
         </div>
     )
 }
