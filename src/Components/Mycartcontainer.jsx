@@ -47,7 +47,7 @@ const Mycartcontainer = () => {
             <MyCart data={data}/>
             <ViewMore data={data}  setdata={setdata}/>
 
-
+             
         </div>
         <div>
             <Payment/>
