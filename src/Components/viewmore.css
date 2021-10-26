@@ -1,0 +1,16 @@
+.viewMore {
+    width:900px;
+    height: 40px;
+    text-align: center;
+}
+
+.viewMore button{
+    border: none;
+    color: orange ;
+    
+    cursor: pointer;
+    background-color: white;
+}
+.viewMore button span{
+    font-size: 20px ;
+}

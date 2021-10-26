@@ -1,23 +1,29 @@
-import React,{useEffect} from 'react'
+import React,{Fragment, useEffect} from 'react'
 import  "./myclass.css"
 const MyCart = ({data}) => {
+    console.log(data);
     return (
-        <div>
-            {data.map((item,idx)=>
-                <div className="card" key={idx}>
+        <Fragment>
+            {  
+             data.map((item,idx)=>{
+              if(item.visibility===true){
+               return <div className="card" key={idx}>
                     <img src={item.strCategoryThumb}/>
                     <div className="text">
                         <h3>{item.strCategory}</h3>
                         <p>{item.strCategoryDescription}</p>
-                        <h3>₹ 700</h3>
+                        <h3>{item.price}</h3>
 
 
 
+                    </div>
                 </div>
-            </div>
-
+              }
+             }
             )}
-        </div>
+        </Fragment>
+            
+        
     )
 }
 
