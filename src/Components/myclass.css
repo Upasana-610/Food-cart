@@ -1,11 +1,8 @@
 .card{
-    width: 800px;
+    width: 900px;
     height: 350px;
     background-color: white;
-    border: 3px solid orange;
-    border-radius: 10px;
-    margin: 10px;
-    background-color: aquamarine;
+    border-bottom: 3px solid #e5eaf0;
     display:flex;
 }
 .card  img{
