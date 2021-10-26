@@ -14,7 +14,7 @@ function App() {
       <div className="container">
     <Mycartcontainer/>
     </div>
-    <CartDropdown/>
+    
     </Fragment>
       );
 }
