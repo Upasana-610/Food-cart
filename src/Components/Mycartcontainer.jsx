@@ -4,7 +4,7 @@ import "./mycartcontainer.css";
 import MyCart from "./MyCart";
 import ViewMore from "./ViewMore";
 import Payment from "./Payment";
-const Mycartcontainer = ({setvalue1}) => {
+const Mycartcontainer = ({setvalue1,setvalue11}) => {
   let [data, setdata] = useState([]);
   // let [dataFromMyCart, setdataFromMyCart] = useState([]);
   // const DataReceive = (dataFromMyCart1) => {
@@ -54,7 +54,7 @@ const Mycartcontainer = ({setvalue1}) => {
   return (
     <div className="mycartcontainer">
       <div className="left">
-        <MyCart data={data} setvalue1={setvalue1} />
+        <MyCart data={data} setvalue1={setvalue1} setvalue11={setvalue11}/>
         <ViewMore data={data} setdata={setdata} />
       </div>
       <div>
