@@ -13,7 +13,6 @@ const ParentContainer = () => {
   const setvalue1 = (value1) => {
     setvalue(value1);
   };
-  console.log(value);
   const setvalue11 = (value11) => {
     setvalue2(value11);
   };
@@ -23,14 +22,13 @@ const ParentContainer = () => {
   const setdata21 = (d)=>{
     setdata1(d);
   }
-  console.log(value1);
 
   return (
     <Fragment>
       <div className="parent">
         <Navbar setdata12={setdata12} setdata21={setdata21} />
         <div className="container"></div>
-        <Mycartcontainer setvalue1={setvalue1} setvalue11={setvalue11}/>
+        <Mycartcontainer setvalue1={setvalue1} setvalue11={setvalue11}  value1={value1}/>
         <div className={`heart ${data ? "" : "hidden"}`}>
           <CartDropdown value={value} />
         </div>

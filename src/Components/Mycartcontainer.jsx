@@ -4,7 +4,7 @@ import "./mycartcontainer.css";
 import MyCart from "./MyCart";
 import ViewMore from "./ViewMore";
 import Payment from "./Payment";
-const Mycartcontainer = ({setvalue1,setvalue11}) => {
+const Mycartcontainer = ({setvalue1,setvalue11,value1}) => {
   let [data, setdata] = useState([]);
   // let [dataFromMyCart, setdataFromMyCart] = useState([]);
   // const DataReceive = (dataFromMyCart1) => {
@@ -12,8 +12,7 @@ const Mycartcontainer = ({setvalue1,setvalue11}) => {
   // };
 
   // DataReceivefromMycart(dataFromMyCart);
-
-
+console.log(value1)
   useEffect(() => {
     const url = "https://www.themealdb.com/api/json/v1/1/categories.php";
 
@@ -30,7 +29,7 @@ const Mycartcontainer = ({setvalue1,setvalue11}) => {
         categories = categories.map((item, idx) => {
           return (item = {
             ...item,
-            ["price"]: ` ₹ ${parseInt(Math.random() * 1000 + 200)}`,
+            ["price"]: ` ₹${parseInt(Math.random() * 1000 + 200)}`,
             ["saveForLater"]: false,
             ["addToCart"]: false,
             ["visibility"]: idx <= 3 ? true : false,
@@ -58,7 +57,7 @@ const Mycartcontainer = ({setvalue1,setvalue11}) => {
         <ViewMore data={data} setdata={setdata} />
       </div>
       <div>
-        <Payment />
+        <Payment value1={value1}/>
       </div>
     </div>
   );

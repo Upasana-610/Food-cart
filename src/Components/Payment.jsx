@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./payment.css"
 import { FaRupeeSign } from 'react-icons/fa';
 
-const Payment = () => {
+const Payment = ({value1}) => {
+    let [sum,setSum]=useState(0);
+    value1.forEach((element) => {
+        sum +=Number(element.price.substring(2));
+        console.log(sum)
+    });
+    // setSum(sum)
+
     return (
         <div className="payment">
         <h3><span><FaRupeeSign/></span> Payment Summary</h3>
@@ -20,7 +27,7 @@ const Payment = () => {
             <li>- 10</li>
             <li>$10</li>
             <li>$6</li>
-            <li className="total">$20</li>
+            <li className="total">{sum}</li>
 
             </ul>
         </div>
