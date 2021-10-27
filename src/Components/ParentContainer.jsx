@@ -6,27 +6,18 @@ import "./parent.css";
 import Navbar from "./Navbar";
 import { Children } from "react";
 const ParentContainer = () => {
-  //   let [toggleCart, setToggleCart] = useState(false);
-  //   let [toggleHeart, setToggleHeart] = useState(false);
-  //   const CartDrop = () => {
-  //     setToggleCart(!toggleCart);
-  //     console.log("object");
-  //   };
-  //   const HeartDrop = () => {
-  //     setToggleHeart(!toggleHeart);
-  //   };
+  let [value,setvalue]=useState([]);
+  const setvalue1 = (value1) =>{
+    setvalue(value1)
+  }
+  console.log(value)
 
-  let [dropArray, setdropArray] = useState([]);
-  const DataReceivefromMycart = (data) => {
-    setdropArray([...dropArray, data]);
-    console.log(dropArray);
-  };
   return (
     <Fragment>
       <div className="parent">
         <Navbar />
         <div className="container"></div>
-        <Mycartcontainer DataReceivefromMycart={DataReceivefromMycart} />
+        <Mycartcontainer setvalue1={setvalue1} />
         <div className="heart hidden">
           <CartDropdown />
         </div>
