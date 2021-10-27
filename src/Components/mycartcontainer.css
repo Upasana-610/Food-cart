@@ -1,9 +1,8 @@
-.mycartcontainer{
-    padding: 20px;
-    border: 1px solid #e5eaf0;
-    width: 800px;
-    background-color: white;
-    z-index: 1;
-    display:flex;
-    position: relative;
+.mycartcontainer {
+  padding: 20px;
+  border: 1px solid #e5eaf0;
+  width: 800px;
+  background-color: white;
+  /* z-index: 1; */
+  display: flex;
 }

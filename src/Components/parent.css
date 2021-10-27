@@ -1,0 +1,19 @@
+.parent {
+  position: relative;
+}
+
+.cart {
+  position: absolute;
+  left: 80%;
+  top: 3.5%;
+}
+
+.heart {
+  position: absolute;
+  left: 77%;
+  top: 3.5%;
+}
+
+.hidden {
+  display: none;
+}

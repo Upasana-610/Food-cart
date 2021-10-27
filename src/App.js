@@ -1,22 +1,10 @@
+import { Fragment } from "react/cjs/react.production.min";
+import "./App.css";
 
-import { Fragment } from 'react/cjs/react.production.min';
-import './App.css';
-import CartDropdown from './Components/CartDropdown';
-import MyCart from './Components/MyCart';
-import Mycartcontainer from './Components/Mycartcontainer';
-import Navbar from './Components/Navbar';
-
+import ParentContainer from "./Components/ParentContainer";
 
 function App() {
-  return (
-    <Fragment>
-    <Navbar/>
-      <div className="container">
-    <Mycartcontainer/>
-    </div>
-    
-    </Fragment>
-      );
+  return <ParentContainer />;
 }
 
 export default App;
