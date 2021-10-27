@@ -2,14 +2,17 @@ import React, { Fragment, useState } from "react";
 import { AiFillHeart, AiOutlineShoppingCart } from "react-icons/ai";
 
 import "./myclass.css";
-const MyCart = ({ data, DataReceive }) => {
+const MyCart = ({ data,setvalue1}) => {
   //   console.log(data);
   let [dropdownArray, setdropdownArray] = useState([]);
 
   const addToDropdown = (Array) => {
     setdropdownArray([...dropdownArray, Array]);
+    
   };
-  DataReceive(dropdownArray);
+  setvalue1(dropdownArray)
+  console.log(dropdownArray)
+  // DataReceive(dropdownArray);
   return (
     <Fragment>
       {data.map((item, idx) => {
