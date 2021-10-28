@@ -4,17 +4,21 @@ import Mycartcontainer from "./Mycartcontainer";
 import CartDropdown from "./CartDropdown";
 import "./parent.css";
 import Navbar from "./Navbar";
+import PaymentForm from "./PaymentForm";
 const ParentContainer = () => {
   let [value, setvalue] = useState([]);
   let [value1, setvalue2] = useState([]);
   let [data, setdata] = useState([]);
   let [data1, setdata1] = useState([]);
-
+  let [toggleForm,settoggleForm]=useState(false)
   const setvalue1 = (value1) => {
     console.log("object");
     setvalue(value1);
     console.log(value);
   };
+  const toggleFormData=(item)=>{
+    settoggleForm(item)
+  }
   const setvalue11 = (value11) => {
     setvalue2(value11);
   };
@@ -42,7 +46,11 @@ const ParentContainer = () => {
         <div className={`cart ${data1 ? "" : "hidden"}`}>
           <CartDropdown value1={value1} />
         </div>
+        <div className={`form ${toggleForm?"":"hidden"}`}>
+        <PaymentForm toggleFormData={toggleFormData}/>
+        </div>
       </div>
+      
     </Fragment>
   );
 };
