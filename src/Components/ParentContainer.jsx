@@ -11,30 +11,36 @@ const ParentContainer = () => {
   let [data1, setdata1] = useState([]);
 
   const setvalue1 = (value1) => {
+    console.log("object");
     setvalue(value1);
+    console.log(value);
   };
   const setvalue11 = (value11) => {
     setvalue2(value11);
   };
-  const setdata12 = (d) =>{
-    setdata(d)
-  }
-  const setdata21 = (d)=>{
+  const setdata12 = (d) => {
+    setdata(d);
+  };
+  const setdata21 = (d) => {
     setdata1(d);
-  }
+  };
 
   return (
     <Fragment>
       <div className="parent">
         <Navbar setdata12={setdata12} setdata21={setdata21} />
         <div className="container"></div>
-        <Mycartcontainer setvalue1={setvalue1} setvalue11={setvalue11}  value1={value1}/>
+        <Mycartcontainer
+          setvalue1={setvalue1}
+          setvalue11={setvalue11}
+          value1={value1}
+        />
         <div className={`heart ${data ? "" : "hidden"}`}>
-          <CartDropdown value={value} />
+          <CartDropdown value={value} setvalue1={setvalue1} />
         </div>
 
         <div className={`cart ${data1 ? "" : "hidden"}`}>
-          <CartDropdown value1= {value1} />
+          <CartDropdown value1={value1} />
         </div>
       </div>
     </Fragment>

@@ -4,7 +4,7 @@ import "./mycartcontainer.css";
 import MyCart from "./MyCart";
 import ViewMore from "./ViewMore";
 import Payment from "./Payment";
-const Mycartcontainer = ({setvalue1,setvalue11,value1}) => {
+const Mycartcontainer = ({ setvalue1, setvalue11, value1 }) => {
   let [data, setdata] = useState([]);
   // let [dataFromMyCart, setdataFromMyCart] = useState([]);
   // const DataReceive = (dataFromMyCart1) => {
@@ -12,18 +12,17 @@ const Mycartcontainer = ({setvalue1,setvalue11,value1}) => {
   // };
 
   // DataReceivefromMycart(dataFromMyCart);
-console.log(value1)
+  // console.log(value1)
   useEffect(() => {
     const url = "https://www.themealdb.com/api/json/v1/1/categories.php";
-
 
     const fetchData = async () => {
       try {
         const response = await fetch(url);
         const json = await response.json();
-        console.log(json);
+        // console.log(json);
         let { categories } = json;
-        console.log(categories);
+        // console.log(categories);
 
         let array = [];
         categories = categories.map((item, idx) => {
@@ -49,15 +48,14 @@ console.log(value1)
     fetchData();
   }, []);
 
-
   return (
     <div className="mycartcontainer">
       <div className="left">
-        <MyCart data={data} setvalue1={setvalue1} setvalue11={setvalue11}/>
+        <MyCart data={data} setvalue1={setvalue1} setvalue11={setvalue11} />
         <ViewMore data={data} setdata={setdata} />
       </div>
       <div>
-        <Payment value1={value1}/>
+        <Payment value1={value1} />
       </div>
     </div>
   );
