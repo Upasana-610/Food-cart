@@ -49,10 +49,9 @@ const PaymentForm = ({toggleFormData}) => {
 </div>
     
    
-    <button type="submit">Pay</button>
+    <button type="submit" onClick={toggleFormdata}>Login</button>
 
 </form>
-<div >ORDER PLACED</div>
 </div>
 
         
