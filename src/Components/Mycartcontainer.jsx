@@ -4,15 +4,8 @@ import "./mycartcontainer.css";
 import MyCart from "./MyCart";
 import ViewMore from "./ViewMore";
 import Payment from "./Payment";
-const Mycartcontainer = ({ setvalue1, setvalue11, value1 }) => {
+const Mycartcontainer = ({ setvalue1, setvalue11, value1}) => {
   let [data, setdata] = useState([]);
-  // let [dataFromMyCart, setdataFromMyCart] = useState([]);
-  // const DataReceive = (dataFromMyCart1) => {
-  //   setdataFromMyCart([...dataFromMyCart,dataFromMyCart1]);
-  // };
-
-  // DataReceivefromMycart(dataFromMyCart);
-  // console.log(value1)
   useEffect(() => {
     const url = "https://www.themealdb.com/api/json/v1/1/categories.php";
 
@@ -20,10 +13,7 @@ const Mycartcontainer = ({ setvalue1, setvalue11, value1 }) => {
       try {
         const response = await fetch(url);
         const json = await response.json();
-        // console.log(json);
         let { categories } = json;
-        // console.log(categories);
-
         let array = [];
         categories = categories.map((item, idx) => {
           return (item = {

@@ -5,9 +5,11 @@
   padding: 20px;
   border: 1px solid #624a1e;
   border-radius: 10px;
+  z-index: 12;
 }
 .form1 input {
   border: none;
+  outline: none;
   width: 100%;
   padding: 10px;
   border-bottom: 2px solid skyblue;
@@ -41,3 +43,22 @@
   background-color: slategray;
   pointer-events: auto;
 } */
+.blackcurtain{
+  background-color: rgba(0,0,0,.6);
+  width:100vw;
+  height: 103vh;
+  position: relative;
+  opacity: 1;
+}
+.form1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.cross-sign{
+  position: absolute;
+  right: -20px;
+  top: 0;
+  cursor: pointer;
+}

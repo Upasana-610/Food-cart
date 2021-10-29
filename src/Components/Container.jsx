@@ -24,7 +24,6 @@ const Container = () => {
         <span className="one"><CartDropdown toggle={toggle}/></span>
         <span className="two"><CartDropdown toggle1={toggle1}/></span>
     </span>
-    {/* <CartDropdown  /> */}
         </Fragment>
     )
 }

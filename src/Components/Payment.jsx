@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./payment.css";
 import { FaRupeeSign } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Payment = ({ value1 }) => {
   let [sum, setSum] = useState(0);
@@ -33,6 +36,20 @@ const Payment = ({ value1 }) => {
   const onchangeCoupon = (e) => {
     setonchangeinput(e.target.value);
   };
+  const showpaid = () =>{
+    notify("ORDER PLACED")
+  }
+  const notify=(text)=>{
+    toast(`🦄${text} `, {
+      position: "top-right",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
+  }
 
   const toggleCoupon = (e) => {
     e.preventDefault();
@@ -50,6 +67,7 @@ const Payment = ({ value1 }) => {
 
   return (
     <div className="payment">
+    <ToastContainer/>
       <h3>
         <span>
           <FaRupeeSign />
@@ -89,7 +107,9 @@ const Payment = ({ value1 }) => {
         </ul>
       </div>
       <div>
-        <button>Procced to Pay</button>
+        <button onClick={
+          showpaid
+        }>Procced to Pay</button>
       </div>
     </div>
   );
