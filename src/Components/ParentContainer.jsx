@@ -46,7 +46,7 @@ const ParentContainer = () => {
         <div className={`cart ${data1 ? "" : "hidden"}`}>
           <CartDropdown value1={value1} />
         </div>
-        <div className={`form ${toggleForm?"":"hidden"}`}>
+        <div className={`form ${toggleForm?"hidden":""}`}>
         <PaymentForm toggleFormData={toggleFormData}/>
         </div>
       </div>
